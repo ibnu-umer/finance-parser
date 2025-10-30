@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "finance-parser"
+version = "1.1.0"
+description = "CLI tool to extract and analyze bank or payment transaction data from PDF statements."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "Muhammad Riyas", email = "muhammadriyask11@email.com" }]
+dependencies = [
+    "camelot-py",
+    "pdfplumber",
+    "pandas",
+]
+
+[project.scripts]
+finance-parser = "finance_parser.__main__:main"
